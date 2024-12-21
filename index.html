@@ -3,159 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>My Webpage</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background: #121212;
-            color: #e0e0e0;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        .gradient-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #1a1a1a 0%, #2d2d2d 100%);
-            z-index: -1;
-        }
-
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        .particle {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            animation: float 8s infinite linear;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0) rotate(0deg); }
-            100% { transform: translateY(-100vh) rotate(360deg); }
-        }
-
-        .navbar {
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            padding: 1rem 2rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .navbar ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-        }
-
-        .navbar a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-            position: relative;
-        }
-
-        .navbar a:hover {
-            color: #eeff00;
-        }
-
-        .navbar a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background: #eeff00;
-            transition: width 0.3s;
-        }
-
-        .navbar a:hover::after {
-            width: 100%;
-        }
-
-        .main-content {
-            margin-top: 80px;
-            padding: 2rem;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .card h2 {
-            color: #00ff88;
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
-        }
-
-        .card p {
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            background: linear-gradient(45deg, #00ff88, #00ccff);
-            border: none;
-            border-radius: 25px;
-            color: #121212;
-            font-weight: bold;
-            text-decoration: none;
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            margin-top: 2rem;
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-        }
-    </style>
 </head>
 <body>
     <div class="gradient-bg"></div>
@@ -174,20 +23,20 @@
 
         <div class="card">
             <h2>About Me</h2>
-            <p>I enjoy programming in `Julia`, `Python`, `Matlab`, `LabVIEW`, and using `LaTeX` or `Typst` for typesetting. The `Linux` distributions I regularly use are `Ubuntu`, `Fedora`, and `Manjaro`. It's a lot of fun for me to work with these tools and I feel like I learn something new every time I use them.</p>
-            <button class="button" href="a-mhamdi">ABOUT</button>
+            <p>In addition to using <em>LaTeX</em> or <em>Typst</em> for typesetting, I like to program in <em>Julia</em>, <em>Python</em>, <em>Matlab</em>, and <em>LabVIEW</em>. I frequently use the <strong>Linux</strong> distributions </em>Ubuntu</em>, <em>Fedora</em>, and `Manjaro`. Working with these tools is a lot of fun for me, and each time I use them, I feel like I am learning something new.</p>
+            <a class="button" href="a-mhamdi">ABOUT ME</a>
         </div>
 
         <div class="card">
             <h2>Machine Learning with Python</h2>
-            <p>This repository contains slides, labs, and code samples for using `Python` to implement some <strong>machine learning</stron> related algorithms.</p>
-            <button class="button" href="mlpy">MLPY</button>
+            <p>Slides, labs, and code samples for implementing certain <mark>machine learning</mark> related techniques in <em>Python</em> are available in this repository.</p>
+            <a class="button" href="mlpy">MLPY</a>
         </div>
 
         <div class="card">
             <h2>Fuzzy Logic, Machine Learning and Deep Learning with Julia</h2>
-            <p>This repository contains slides, labs and code examples for using `Julia` to implement some <srong>artificial intelligence</srong> related algorithms. Codes run on top of a `Docker` image, ensuring a consistent and reproducible environment.</p>
-            <button class="button" href="jlai">JLAI</button>
+            <p>Slides, labs, and code examples for implementing certain <mark>artificial intelligence</mark> related methods with <em>Julia</em> are available in this repository. Codes execute on a <em>Docker</em> image, guaranteeing a reproducible and consistent environment.</p>
+            <a class="button" href="jlai">JLAI</a>
         </div>
 
 
@@ -195,23 +44,8 @@
     </main>
 
     <footer>
-        <p>Your best work is always ahead of you.</p>
+        <p><i>Your best work is always ahead of you.</i></p>
     </footer>
-
-    <script>
-        // Create floating particles
-        const particlesContainer = document.getElementById('particles');
-        for (let i = 0; i < 50; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.width = Math.random() * 5 + 'px';
-            particle.style.height = particle.style.width;
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.animationDuration = (Math.random() * 8 + 8) + 's';
-            particle.style.animationDelay = (Math.random() * 5) + 's';
-            particlesContainer.appendChild(particle);
-        }
-    </script>
 </body>
 </html>
 
